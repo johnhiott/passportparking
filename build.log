@@ -1,0 +1,53 @@
+2014-10-22 11:41:17,936 [ 208796]   INFO - j.compiler.server.BuildManager - BUILDER_PROCESS [stdout]: Build process started. Classpath: /home/john/Downloads/idea-IC-129.713/lib/jps-launcher.jar:/home/john/Downloads/adt-bundle-linux-x86_64-20130729/sdk/lib/tools.jar:/home/john/Downloads/idea-IC-129.713/lib/optimizedFileManager.jar:/home/john/Downloads/idea-IC-129.713/lib/ecj-4.2.1.jar 
+2014-10-22 11:41:27,270 [ 218130]   INFO - lij.compiler.impl.CompilerUtil - 	COMPILATION FINISHED (BUILD PROCESS); Errors: 0; warnings: 1 took 10417 ms: 0 min 10sec 
+2014-10-22 11:41:28,394 [ 219254]   INFO - s.impl.stores.FileBasedStorage - Document was not loaded for $APP_CONFIG$/consoleFolding.xml file is null 
+2014-10-22 11:41:28,729 [ 219589]   INFO - ment.AndroidPsiAugmentProvider - R_CLASS_AUGMENT: 9 classes added 
+2014-10-22 11:43:32,806 [ 343666]   INFO - ment.AndroidPsiAugmentProvider - R_CLASS_AUGMENT: 9 classes added 
+2014-10-22 11:43:32,880 [ 343740]   INFO - ment.AndroidPsiAugmentProvider - R_CLASS_AUGMENT: 9 classes added 
+2014-10-22 11:45:12,063 [ 442923]   INFO - a.repo.GitUntrackedFilesHolder - GitUntrackedFilesHolder: Index has changed, marking file:///home/john/workspace/android/FitbitWidget recursively dirty 
+2014-10-22 11:45:31,228 [ 462088]   INFO - ij.compiler.impl.CompileDriver - COMPILATION STARTED (BUILD PROCESS) 
+2014-10-22 11:45:31,620 [ 462480]   INFO - j.compiler.server.BuildManager - BUILDER_PROCESS [stdout]: Build process started. Classpath: /home/john/Downloads/idea-IC-129.713/lib/jps-launcher.jar:/home/john/Downloads/adt-bundle-linux-x86_64-20130729/sdk/lib/tools.jar:/home/john/Downloads/idea-IC-129.713/lib/optimizedFileManager.jar:/home/john/Downloads/idea-IC-129.713/lib/ecj-4.2.1.jar 
+2014-10-22 11:45:36,733 [ 467593]   INFO - lij.compiler.impl.CompilerUtil - 	COMPILATION FINISHED (BUILD PROCESS); Errors: 0; warnings: 3 took 5468 ms: 0 min 5sec 
+2014-10-22 12:07:55,682 [1806542]   INFO - ains.android.util.AndroidUtils - /home/john/Downloads/adt-bundle-linux-x86_64-20130729/sdk/tools/android sdk 
+2014-10-22 12:38:49,353 [3660213]   INFO - indexing.UnindexedFilesUpdater - Indexable files iterated in 55 ms 
+2014-10-22 12:38:49,353 [3660213]   INFO - indexing.UnindexedFilesUpdater - Unindexed files update started: 0 files to update 
+2014-10-22 12:38:49,353 [3660213]   INFO - indexing.UnindexedFilesUpdater - Unindexed files update done in 0 ms 
+2014-10-22 12:46:54,709 [4145569]   INFO - ment.AndroidPsiAugmentProvider - R_CLASS_AUGMENT: 9 classes added 
+2014-10-22 12:47:01,892 [4152752]   INFO - ij.compiler.impl.CompileDriver - COMPILATION STARTED (BUILD PROCESS) 
+2014-10-22 12:47:03,390 [4154250]   INFO - j.compiler.server.BuildManager - BUILDER_PROCESS [stdout]: Build process started. Classpath: /home/john/Downloads/idea-IC-129.713/lib/jps-launcher.jar:/home/john/Downloads/adt-bundle-linux-x86_64-20130729/sdk/lib/tools.jar:/home/john/Downloads/idea-IC-129.713/lib/optimizedFileManager.jar:/home/john/Downloads/idea-IC-129.713/lib/ecj-4.2.1.jar 
+2014-10-22 12:47:06,063 [4156923]   INFO - lij.compiler.impl.CompilerUtil - 	COMPILATION FINISHED (BUILD PROCESS); Errors: 0; warnings: 0 took 4145 ms: 0 min 4sec 
+2014-10-22 12:49:18,223 [4289083]   INFO - ment.AndroidPsiAugmentProvider - R_CLASS_AUGMENT: 9 classes added 
+2014-10-22 12:49:18,228 [4289088]   INFO - ment.AndroidPsiAugmentProvider - R_CLASS_AUGMENT: 9 classes added 
+2014-10-22 12:49:28,216 [4299076]   INFO - ij.compiler.impl.CompileDriver - COMPILATION STARTED (BUILD PROCESS) 
+2014-10-22 12:49:28,604 [4299464]   INFO - j.compiler.server.BuildManager - BUILDER_PROCESS [stdout]: Build process started. Classpath: /home/john/Downloads/idea-IC-129.713/lib/jps-launcher.jar:/home/john/Downloads/adt-bundle-linux-x86_64-20130729/sdk/lib/tools.jar:/home/john/Downloads/idea-IC-129.713/lib/optimizedFileManager.jar:/home/john/Downloads/idea-IC-129.713/lib/ecj-4.2.1.jar 
+2014-10-22 12:49:30,077 [4300937]   INFO - lij.compiler.impl.CompilerUtil - 	COMPILATION FINISHED (BUILD PROCESS); Errors: 0; warnings: 0 took 1865 ms: 0 min 1sec 
+2014-10-22 12:52:25,020 [4475880]   INFO -    #org.jetbrains.io.WebServer - web server stopped 
+2014-10-22 12:52:25,084 [4475944]   INFO - ins.android.sdk.AndroidSdkData - DDMLib terminated 
+2014-10-22 12:52:25,085 [4475945]   INFO - il.indexing.FileBasedIndexImpl - START INDEX SHUTDOWN 
+2014-10-22 12:52:25,135 [4475995]   INFO - il.indexing.FileBasedIndexImpl - END INDEX SHUTDOWN 
+2014-10-22 12:52:25,135 [4475995]   INFO - stubs.SerializationManagerImpl - START StubSerializationManager SHUTDOWN 
+2014-10-22 12:52:25,136 [4475996]   INFO - stubs.SerializationManagerImpl - END StubSerializationManager SHUTDOWN 
+2014-10-22 12:52:25,137 [4475997]   INFO - .history.utils.LocalHistoryLog - Purging local history... 
+2014-10-22 12:52:25,397 [4476257]   INFO - .history.utils.LocalHistoryLog - Local history storage successfully closed. 
+2014-10-22 12:52:25,413 [4476273]   WARN - api.vfs.impl.local.FileWatcher - Watcher terminated. 
+2014-10-22 12:52:25,523 [4476383]   WARN - ution.process.OSProcessHandler - Cannot kill process tree. Trying to destroy process using Java API. Cmdline:
+null 
+2014-10-22 12:52:25,523 [4476383]   INFO - newvfs.persistent.PersistentFS - VFS dispose started 
+2014-10-22 12:52:25,533 [4476393]   INFO - newvfs.persistent.PersistentFS - VFS dispose completed 
+2014-10-22 12:52:25,545 [4476405]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE SHUTDOWN ------------------------------------------------------ 
+2014-10-22 12:56:31,665 [ 219782]   INFO - j.compiler.server.BuildManager - BUILDER_PROCESS [stdout]: Build process started. Classpath: /home/john/Downloads/idea-IC-129.713/lib/jps-launcher.jar:/home/john/Downloads/adt-bundle-linux-x86_64-20130729/sdk/lib/tools.jar:/home/john/Downloads/idea-IC-129.713/lib/optimizedFileManager.jar:/home/john/Downloads/idea-IC-129.713/lib/ecj-4.2.1.jar 
+2014-10-22 12:56:33,819 [ 221936]   INFO - lij.compiler.impl.CompilerUtil - 	COMPILATION FINISHED (BUILD PROCESS); Errors: 0; warnings: 0 took 2510 ms: 0 min 2sec 
+2014-10-22 15:56:32,135 [11020252]   INFO -    #org.jetbrains.io.WebServer - web server stopped 
+2014-10-22 15:56:32,189 [11020306]   INFO - ins.android.sdk.AndroidSdkData - DDMLib terminated 
+2014-10-22 15:56:32,190 [11020307]   INFO - il.indexing.FileBasedIndexImpl - START INDEX SHUTDOWN 
+2014-10-22 15:56:32,220 [11020337]   INFO - il.indexing.FileBasedIndexImpl - END INDEX SHUTDOWN 
+2014-10-22 15:56:32,220 [11020337]   INFO - stubs.SerializationManagerImpl - START StubSerializationManager SHUTDOWN 
+2014-10-22 15:56:32,220 [11020337]   INFO - stubs.SerializationManagerImpl - END StubSerializationManager SHUTDOWN 
+2014-10-22 15:56:32,221 [11020338]   INFO - .history.utils.LocalHistoryLog - Purging local history... 
+2014-10-22 15:56:32,225 [11020342]   INFO - .history.utils.LocalHistoryLog - Local history storage successfully closed. 
+2014-10-22 15:56:32,235 [11020352]   WARN - api.vfs.impl.local.FileWatcher - Watcher terminated. 
+2014-10-22 15:56:32,266 [11020383]   WARN - ution.process.OSProcessHandler - Cannot kill process tree. Trying to destroy process using Java API. Cmdline:
+null 
+2014-10-22 15:56:32,266 [11020383]   INFO - newvfs.persistent.PersistentFS - VFS dispose started 
+2014-10-22 15:56:32,273 [11020390]   INFO - newvfs.persistent.PersistentFS - VFS dispose completed 
+2014-10-22 15:56:32,277 [11020394]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE SHUTDOWN ------------------------------------------------------ 

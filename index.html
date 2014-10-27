@@ -1,0 +1,124 @@
+<html>
+<head>
+  <title>Passport Parking</title>
+  <script src="jquery/dist/jquery.js"></script>
+  <script src="bootstrap/dist/js/bootstrap.js"></script>
+  <script src="jstree/dist/jstree.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="customtree.js"></script>
+  <script src="customsocketio.js"></script>
+  <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="jstree/dist/themes/default/style.min.css" />
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="row">
+    <h3>Passport Parking Challenge</h3>
+    <div class="alert alert-danger" role="alert"></div>
+
+    <div class="col-md-4">
+      <div id="jstree"></div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title" id="factoryName">John</h3>
+        </div>
+        <div class="panel-body">
+          <b>Min value of worker:</b> <div id="minWorkerValue">1</div><br/>
+          <b>Max value of worker:</b> <div id="maxWorkerValue">100</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end row -->
+</div> <!-- end container -->
+
+
+<!-- MODAL FOR NEW FACTORY -->
+<div class="modal fade" id="createFactory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="createFactoryLabal">Create Factory</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form" role="form">
+          <div class="form-group">
+            <label for="factoryname">Name</label>
+            <input type="text" class="form-control" id="factoryname" placeholder="Enter Factory Name">
+          </div>
+          <div class="form-group">
+            <label for="factorymin">Min</label>
+            <input class="form-control" type="number" min="1" id="factorymin" placeholder="Enter min node value.">
+          </div>
+          <div class="form-group">
+            <label for="factorymax">Max</label>
+            <input class="form-control" type="number" min="1" id="factorymax" placeholder="Enter max node value.">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="newfactory">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END MODAL FOR NEW FACTORY -->
+
+<!-- MODAL FOR DELETE FACTORY -->
+<div class="modal fade" id="deleteFactory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="deleteFactoryLabel">Delete Factory</h4>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete factory?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="deletefactory">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END MODAL FOR DELETE FACTORY -->
+
+
+<!-- MODAL FOR GENERATING WORKERS -->
+<div class="modal fade" id="createWorkers" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="createFactoryLabal">Create Workers</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form" role="form">
+          <div class="form-group">
+            <label for="factorymax">Quantity</label>
+            <input class="form-control" type="number" min="1" id="workerquantity" placeholder="How many workers? (1-15)?">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="generateworkers">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END MODAL FOR GENERATING WORKERS -->
+
+
+</body>
+</html>
