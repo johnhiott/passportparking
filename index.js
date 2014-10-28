@@ -16,6 +16,8 @@ var async = require('async');
 var CREATE_FACTORY = "createfactory";
 var DELETE_FACTORY = "deletefactory";
 var CREATE_NODES = "createnodes";
+var GENERATE_WORKERS = "generateworkers";
+var DELETE_WORKER = "deleteworker";
 
 
 /*
@@ -84,15 +86,19 @@ function createWorker(value, parent){
   worker.set("parent", parent);
   worker.save(null, {
     success: function(worker) {
-      //newNode = createFactoryNode(factory.id, name);
-      //io.emit('addnode', newNode);
+
+      msg = {
+        parent : parent.id,
+        node   : {  id   : "worker_" + worker.id,
+                    text : value }
+      };
+      io.emit('addworker', msg);
     },
     error: function(worker, error) {
       console.log(error.message);
     }
   });
 }
-
 
 /*
   Delete a factory
@@ -141,6 +147,7 @@ function buildTree(sendData){
             workerNodes = [];
             _.each(workers, function(worker){
               workerData = {
+                id    : "worker_" + worker.id,
                 text  : worker.get("value")
               };
               workerNodes.push( workerData );
@@ -171,6 +178,7 @@ function buildTree(sendData){
   Generate X (quantity) workers for factory(factoryId)
 */
 function generateWorkers(factoryId, quantity){
+  console.log(factoryId);
   var query = new Parse.Query(Factory);
   query.get(factoryId, {
     success: function(factory) {
@@ -180,11 +188,11 @@ function generateWorkers(factoryId, quantity){
         success: function(results) {
 
           for (var i = 0; i < results.length; i++) {
-            var worker = results[i];
+            worker = results[i];
 
             worker.destroy({
-              success: function(myObject) {
-                // The object was deleted from the Parse Cloud.
+              success: function(deletedWorker) {
+                io.emit('deletenode', 'worker_' + deletedWorker.id);
               },
               error: function(myObject, error) {
                 // The delete failed.
@@ -195,7 +203,7 @@ function generateWorkers(factoryId, quantity){
           //create workers
           for ( x=0; x<quantity; x++ ){
             value = Math.floor((Math.random() * factory.get("max")) + factory.get("min"));
-            createWorker(value, factory)
+            createWorker(value, factory);
           }
 
         },
@@ -228,8 +236,13 @@ io.on('connection', function(socket){
   });
 
   //user wants to generate new workers
-  socket.on( "generateworkers", function(msg){
+  socket.on( GENERATE_WORKERS, function(msg){
     generateWorkers(msg.id, msg.quantity);
+  });
+
+  //user wants to delete workers
+  socket.on( DELETE_WORKER, function(msg){
+    generateWorkers(msg);
   });
 
 });

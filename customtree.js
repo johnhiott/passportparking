@@ -63,7 +63,12 @@ $( document ).ready(function(){
   */
   $('#jstree').on('select_node.jstree', function (node, selected, event) {
     node = selected.node;
-    if (node.data.type == "factory"){
+    //javascript short circuits :-)
+    if ( node.data && node.data.type == "factory"){
+      $('#factoryDetails').show();
+      $('#factoryName').html(node.text);
+      $('#minWorkerValue').html(node.data.min);
+      $('#maxWorkerValue').html(node.data.max);
     }
   }).jstree();
 

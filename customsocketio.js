@@ -14,6 +14,7 @@ $( document ).ready(function(){
     min = $('#factorymin').val();
     max = $('#factorymax').val();
 
+    //TODO: do more with invalid input
     if (min < 1){  //min must be greater than one
       return;
     }
@@ -23,7 +24,14 @@ $( document ).ready(function(){
     if (name.length < 2){  //name must be two chars long
       return;
     }
+
+    $(this).prop("disabled", true);  //disable save button, enable again on success or fail of save
     socket.emit('createfactory', { name: name, min: min, max: max } );
+
+    $('#factoryname').val('');
+    $('#factorymin').val('');
+    $('#factorymax').val('');
+
   });
 
   /*
@@ -36,7 +44,6 @@ $( document ).ready(function(){
   });
 
   $('#generateworkers').click(function(){
-    alert('hi');
     quantity = $('#workerquantity').val();
 
     instance = $('#jstree').jstree(true);
@@ -55,6 +62,19 @@ $( document ).ready(function(){
     instance = $('#jstree').jstree(true);
     root = $('#rootnode');
     instance.create_node (root, msg);
+    $('#newfactory').prop('disabled', false);
+    $('#createFactory').modal('hide');
+
+  });
+
+  /*
+    Add worker to the tree
+  */
+  socket.on('addworker', function(msg){
+    instance = $('#jstree').jstree(true);
+    parent = instance.get_node(msg.parent);
+    root = $('#' + msg.parent);
+    instance.create_node (root, msg.node);
   });
 
   /*
@@ -63,6 +83,13 @@ $( document ).ready(function(){
   socket.on('deletenode', function(msg){
     instance = $('#jstree').jstree(true);
     instance.delete_node (msg);
+  });
+
+  socket.on('factorySaveError', function(msg){
+    errorDiv = $('#factoryError');
+    errorDiv.show();
+    errorDiv.html(msg);
+    $('#newFactory').prop('disabled', false);
   });
 
 });

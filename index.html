@@ -18,20 +18,19 @@
 
   <div class="row">
     <h3>Passport Parking Challenge</h3>
-    <div class="alert alert-danger" role="alert"></div>
 
     <div class="col-md-4">
       <div id="jstree"></div>
     </div>
 
     <div class="col-md-8">
-      <div class="panel panel-default">
+      <div id="factoryDetails" class="panel panel-default" style="display: none;">
         <div class="panel-heading">
-          <h3 class="panel-title" id="factoryName">John</h3>
+          <h3 class="panel-title" id="factoryName"></h3>
         </div>
         <div class="panel-body">
-          <b>Min value of worker:</b> <div id="minWorkerValue">1</div><br/>
-          <b>Max value of worker:</b> <div id="maxWorkerValue">100</div>
+          <b>Min value of worker:</b> <div id="minWorkerValue"></div><br/>
+          <b>Max value of worker:</b> <div id="maxWorkerValue"></div>
         </div>
       </div>
     </div>
@@ -49,6 +48,7 @@
         <h4 class="modal-title" id="createFactoryLabal">Create Factory</h4>
       </div>
       <div class="modal-body">
+        <div id="factoryError" style="display: none;" class="alert alert-danger" role="alert"></div>
         <form class="form" role="form">
           <div class="form-group">
             <label for="factoryname">Name</label>
@@ -112,7 +112,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" id="generateworkers">Save</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="generateworkers">Save</button>
       </div>
     </div>
   </div>
