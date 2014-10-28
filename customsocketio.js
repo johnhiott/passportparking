@@ -41,6 +41,8 @@ $( document ).ready(function(){
     instance = $('#jstree').jstree(true);
     id = instance.get_selected (false);
     socket.emit('deletefactory', id[0] );
+    $('#factoryDetails').hide();
+
   });
 
   $('#generateworkers').click(function(){
